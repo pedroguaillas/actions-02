@@ -8,4 +8,11 @@ jobs:
 
   steps:
    - name: Hola mundo
+     run : echo "Hola mundo first"
+ 
+ seconds_jobs:
+  runs-on: ubuntu-latest
+
+  steps:
+   - name: Hola mundo
      run : echo "Hola mundo seconds"
