@@ -9,7 +9,6 @@ jobs:
   steps:
    - name: Hola mundo
      run : echo "Hola mundo first"
-     run : cat hello.php
  
  seconds_job:
   if: false
