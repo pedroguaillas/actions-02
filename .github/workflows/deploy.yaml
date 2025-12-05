@@ -12,6 +12,7 @@ jobs:
      run : cat hello.php
  
  seconds_job:
+  if: false
   needs: first_job
   runs-on: ubuntu-latest
 
