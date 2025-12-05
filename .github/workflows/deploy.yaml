@@ -10,7 +10,7 @@ jobs:
    NAME: PedroGuaillas
 
   steps:
-   - name: Hola mundo
+   - name: Hi world first
      run : echo "Hola mundo $NAME"
  
  seconds_job:
@@ -19,5 +19,19 @@ jobs:
   runs-on: ubuntu-latest
 
   steps:
-   - name: Hola mundo
+   - name: Hi world seconds
      run : echo "Hola mundo ${{ github.ref }}"
+
+ tre_job:
+  needs: seconds_job
+  runs-on: ubuntu-latest
+
+  steps:
+   - name: Working dir
+     run : ls -la
+
+   - name: Action
+     uses: actions/checkout@v4
+
+   - name: Working dir after action
+     run : ls -la
